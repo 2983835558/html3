@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			幸运用户抽奖程序 
+			<input type="button" @click="rdmNumber=Math.ceil(Math.random()*10)%3" name="" id="" value="抽奖" />
+			<br>
+			本次幸运用户为:
+			{{students[rdmNumber].name}}
+		</div>
+		<script type="text/javascript">
+			let v = new Vue({
+				el:'#app',
+				data:{
+					rdmNumber:'1',
+					students:[
+						{name:'张三',code:'1'},
+						{name:'李斯',code:'2'},
+						{name:'王五',code:'3'},
+						{name:'爱国',code:'1'},
+						{name:'敬业',code:'2'},
+						{name:'守法',code:'3'}
+					]
+				}
+			})
+		</script>	
+	</body>
+</html>
